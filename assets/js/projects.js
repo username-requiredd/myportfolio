@@ -1,5 +1,4 @@
 const projects = document.getElementById("portfolios")
-console.log(projects)
 
 const portfolios = [
     {
@@ -19,7 +18,7 @@ const portfolios = [
 {
     id:2,
     name:"Metablog",
-    url:"https://kaleidoscopic-lollipop-bcdcc4.app/",
+    url:"https://metablogg.netlify.app//",
     category:"front-end",
     date:"January 2024",
 
@@ -60,7 +59,6 @@ portfolios.forEach(({ img,id }) => {
             <div class="portfolio-wrap" id=${id}>
                 <img src="${pc}" class="img-fluid" alt="" id=${id}>
                 <div class="portfolio-links">
-                    <a href="${img[0]}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Click to enlarge"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
             </div>
@@ -73,6 +71,5 @@ projects.addEventListener("click", (e) => {
         const ID = parseInt(e.target.id);
         const search = portfolios.find(({ id }) => id === ID);
         localStorage.setItem("project", JSON.stringify(search));
-        console.log(search);
     }
 });

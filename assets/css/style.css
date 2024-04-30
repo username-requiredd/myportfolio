@@ -535,7 +535,9 @@ section {
   border: 2px solid #1f5297;
 }
 
-/*--------------------------------------------------------------
+/*-------------------------------
+
+-------------------------------
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio .portfolio-item {
@@ -612,7 +614,7 @@ section {
   text-align: center;
   background: rgba(20, 157, 221, 0.75);
   transition: 0.3s;
-  width: 50%;
+  width: 100%;
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
