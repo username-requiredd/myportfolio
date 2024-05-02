@@ -14,14 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "Message: $message<br>";
 
     // Include PHPMailer library
-    require "vendor/autoload.php";
+    require_once 'vendor/autoload.php';
 
     // Use PHPMailer classes
-    use vendor\phpmailer\phpmailer\PHPMailer;
-    use vendor\phpmailer\phpmailer\Exception;
-
-    use vendor/php
-
+    use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
+    
     // Create a PHPMailer instance
     $mail = new PHPMailer(true);
 
@@ -32,8 +30,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $mail->Host = "smtp.gmail.com";
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
-        $mail->Username = "apham94488@gmail.com";
-        $mail->Password = "tfiv ofjh afyz ejod";
+        $mail->Username = "apham94488@gmail.com"; // Replace with your email address
+        $mail->Password = "tfiv ofjh afyz ejod"; // Replace with your email password
 
         // Set sender and recipient
         $mail->setFrom($email, $name);
